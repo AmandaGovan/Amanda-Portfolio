@@ -1,0 +1,220 @@
+/* removing browser default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* defining colour variables */
+:root {
+    --primary-color: #383838;
+    --secondary-color: #ffaec9;
+    --tertiary-color: #9fc6ed;
+  }
+
+/* parent font and color */
+body {
+    color: var(--primary-color);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+header {
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--primary-color);
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 35px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro {
+    max-width: 15%;
+    border-radius: 50%;
+}
+
+.panda img {
+    max-width: 15%;
+    border-radius: 50%;
+}
+
+h2 {
+    padding: 20px 35px;
+}
+
+h3 {
+    border-bottom: solid var(--tertiary-color);
+    padding: 20px 35px;
+    max-width: 30%;
+    text-align: center;
+}
+
+#about-me {
+    padding: 20px 35px;
+    text-align: center;
+}
+
+#my-work {
+    justify-content: center; 
+    justify-items: center; 
+    text-align: center;
+    margin: auto;
+}
+
+.primary-project {
+    display: block;
+    width: auto;
+    padding: 5%;
+    text-align: center;
+}
+
+.primary-project img {
+    border: solid 5px;
+    border-color: var(--tertiary-color);
+    border-radius: 8%;
+    text-align: center;
+}
+
+.project {
+    padding: 2px;
+}
+
+.project img {
+    border: solid 5px;
+    border-color: var(--tertiary-color);
+    border-radius: 15%;
+}
+
+#find-me {
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+    text-align: center;
+}
+
+.contact {
+    padding: 20px 35px;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    header nav ul li a {
+        font-size: 20px;
+    }
+    
+    footer h3, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .intro, .panda {
+        width: 100%;
+    }
+      
+    .hero {
+        text-align: center;
+    }
+
+    #about-me {
+        width: 80%;
+    }
+      
+    #my-work {
+        flex: 0 70%;
+    }
+}
+  
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+    
+    #about-me {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .project img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    #my-work {
+        flex: 100%;  
+    }
+}
+  
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    .section h3 {
+        width: 95%;
+    }
+    
+    .projects {
+        flex: 0 100%;
+    }
+    
+    footer {
+        text-align: center;
+        flex: 0 100%;
+    }
+}
